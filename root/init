@@ -3,6 +3,8 @@ mount -t devtmpfs devtmpfs /dev
 mount -t proc proc /proc
 mount -t sysfs sysfs /sys
 mount -t tmpfs tmpfs /tmp
-mount -t 9p -o trans=virtio,version=9p2000.L host0 /mnt/host
+mount -t 9p -o trans=virtio,version=9p2000.L host /mnt/host
 
 sh
+echo "Init exiting, shutting down system"
+poweroff -f
